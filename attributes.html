@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Attributes Demo</title>
+  
+</head>
+<body>
+
+  <!-- Global Attributes + Event -->
+  <div id="special" class="highlight" style="padding: 10px;" title="Hover text"
+       data-info="customData" lang="en" dir="ltr"
+       onclick="alert('Div clicked!')">
+    Hello, global attributes.
+  </div>
+
+  <!-- Form Attributes -->
+  <form action="/submit" method="POST" autocomplete="on" onsubmit="return confirm('Submit?')">
+    <input type="text" name="username" placeholder="Enter name" required autofocus maxlength="20">
+    <input type="email" name="email" placeholder="Enter email" value="user@example.com">
+    <input type="checkbox" name="agree" checked> I agree
+    <br>
+    <input type="number" name="age" min="18" max="99" step="1">
+    <br>
+    <button type="submit" disabled>summit</button>
+  </form>
+
+  <!-- Anchor & Link -->
+  <p>
+    Visit <a href="https://ultimez.com" target="_blank" rel="noopener noreferrer" download>our site</a>
+  </p>
+
+  <!-- Media -->
+  <img src="images.jpeg" alt="images Image" width="150" height="150">
+  <audio controls autoplay loop muted>
+    <source src="brain-implant-cyberpunk-sci-fi-trailer-action-intro-330416.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <!-- Table -->
+  <table border="1">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+    </tr>
+    <tr>
+      <td headers="name" rowspan="2">Alice</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>31</td>
+    </tr>
+  </table>
+
+  <!-- ARIA Attributes -->
+  <div role="button" aria-pressed="false" aria-label="Toggle menu" tabindex="0"
+       onkeydown="if(event.key === 'Enter') alert('ARIA button pressed')">
+    Accessible Button
+  </div>
+
+</body>
+</html>
